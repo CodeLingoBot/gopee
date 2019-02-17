@@ -137,7 +137,7 @@ func (manager *Manager) Update(sid string) {
 	}
 }
 
-// clean clients for expired sessions
+// GC: clean clients for expired sessions
 func (manager *Manager) GC() {
 	// log.Println("SESSION::GC")
 	manager.lock.Lock()
